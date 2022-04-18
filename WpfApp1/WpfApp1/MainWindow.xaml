@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="bird is very angry at the developer" Width="800" Height="536">
+    <Window.Background>
+        <ImageBrush ImageSource="/Textures/1620826823_11-phonoteka_org-p-pikselnii-fon-zemli-18.jpg"/>
+    </Window.Background>
+    <StackPanel x:Name="w" Focusable="True">
+
+        <Image x:Name="bird" MouseLeftButtonDown="StartDrag" Source="/Textures/kisspng-flappy-bird-tap-bird-2d-jump-bird-jump-squishy-bir-flies-5abdce778f3ff8.7258311415223885995868.png" Margin="28,350,726,126"/>
+        <Image x:Name="target" Source="/Textures/pngwing.com.png"   Margin="739,287,0,83"/>
+        
+        <StackPanel x:Name="StartData" HorizontalAlignment="Left" Margin="18,18,0,0" Orientation="Horizontal" VerticalAlignment="Top">
+            <TextBox x:Name="StSpeed" materialDesign:HintAssist.Hint="Введите начальную скорость" Height="26"   Width="162" Cursor="IBeam" />
+
+            <TextBox x:Name="StAngle"  materialDesign:HintAssist.Hint="Введите угол полета"  Height="29"  Width="168" Cursor="IBeam" />
+            <Button x:Name="Fire" Content="FIRE!!!!!" Height="39" Width="127" Click="Button_Click" Cursor="Hand"/>
+
+
+        </StackPanel>
+        <Canvas x:Name="Move" Margin="10,62,0,0">
+            
+        </Canvas>
+        
+
+        <Label x:Name="Score" Height="24" Canvas.Left="349" Canvas.Top="31" Width="232" Margin="370,26,198,470"/>
+        <Button x:Name="restart" Content="restart" HorizontalAlignment="Left" Height="28" Margin="678,26,0,0" VerticalAlignment="Top" Width="92" Click="restartGame"/>
+
+    </StackPanel>
+</Window>

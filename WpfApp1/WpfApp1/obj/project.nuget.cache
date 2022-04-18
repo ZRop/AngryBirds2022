@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "OytKzkdb3M587ViNES96Ps4e7j64Qy8rHUiykFVqcAGx6E0cL6zMdSKh81TrG0OlPxuN3WJyw30Ll5ScMCJsZw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Artem.Churikov\\Documents\\GitHub\\Bot\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Artem.Churikov\\.nuget\\packages\\materialdesigncolors\\2.0.4\\materialdesigncolors.2.0.4.nupkg.sha512",
+    "C:\\Users\\Artem.Churikov\\.nuget\\packages\\materialdesignthemes\\4.3.0\\materialdesignthemes.4.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}

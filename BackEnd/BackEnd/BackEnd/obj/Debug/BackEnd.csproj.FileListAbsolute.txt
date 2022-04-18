@@ -1,0 +1,7 @@
+C:\Users\Artem.Churikov\source\repos\BackEnd\BackEnd\bin\Debug\BackEnd.exe.config
+C:\Users\Artem.Churikov\source\repos\BackEnd\BackEnd\bin\Debug\BackEnd.exe
+C:\Users\Artem.Churikov\source\repos\BackEnd\BackEnd\bin\Debug\BackEnd.pdb
+C:\Users\Artem.Churikov\source\repos\BackEnd\BackEnd\obj\Debug\BackEnd.csprojAssemblyReference.cache
+C:\Users\Artem.Churikov\source\repos\BackEnd\BackEnd\obj\Debug\BackEnd.csproj.CoreCompileInputs.cache
+C:\Users\Artem.Churikov\source\repos\BackEnd\BackEnd\obj\Debug\BackEnd.exe
+C:\Users\Artem.Churikov\source\repos\BackEnd\BackEnd\obj\Debug\BackEnd.pdb

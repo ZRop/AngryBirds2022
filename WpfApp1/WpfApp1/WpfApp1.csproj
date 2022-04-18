@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="1620826823_11-phonoteka_org-p-pikselnii-fon-zemli-18.jpg" />
+    <None Remove="184-1842460_flappy-bird-bird-png-transparent-png.jpg" />
+    <None Remove="kisspng-flappy-bird-tap-bird-2d-jump-bird-jump-squishy-bir-flies-5abdce778f3ff8.7258311415223885995868.png" />
+    <None Remove="kisspng-pixel-art-deviantart-5af490d5886b65.8375390915259773015588.jpg" />
+    <None Remove="klipartz.com.png" />
+    <None Remove="png-transparent-flappy-bird-blue-xbox-360-flappy-bird-thumbnail.png" />
+    <None Remove="pngwing.com.png" />
+    <None Remove="Textures\pngwing.com.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="1620826823_11-phonoteka_org-p-pikselnii-fon-zemli-18.jpg" />
+    <Resource Include="kisspng-flappy-bird-tap-bird-2d-jump-bird-jump-squishy-bir-flies-5abdce778f3ff8.7258311415223885995868.png" />
+    <Resource Include="Textures\kisspng-pixel-art-deviantart-5af490d5886b65.8375390915259773015588.jpg" />
+    <Resource Include="Textures\pngwing.com.png" />
+    <Resource Include="Textures\1620826823_11-phonoteka_org-p-pikselnii-fon-zemli-18.jpg" />
+    <Resource Include="Textures\184-1842460_flappy-bird-bird-png-transparent-png.jpg" />
+    <Resource Include="Textures\kisspng-flappy-bird-tap-bird-2d-jump-bird-jump-squishy-bir-flies-5abdce778f3ff8.7258311415223885995868.png" />
+    <Resource Include="Textures\klipartz.com.png" />
+    <Resource Include="Textures\png-transparent-flappy-bird-blue-xbox-360-flappy-bird-thumbnail.png" />
+  </ItemGroup>
+
+</Project>
