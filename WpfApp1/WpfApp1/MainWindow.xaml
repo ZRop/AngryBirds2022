@@ -12,24 +12,21 @@
     </Window.Background>
     <StackPanel x:Name="w" Focusable="True">
 
-        <Image x:Name="bird" MouseLeftButtonDown="StartDrag" Source="/Textures/kisspng-flappy-bird-tap-bird-2d-jump-bird-jump-squishy-bir-flies-5abdce778f3ff8.7258311415223885995868.png" Margin="28,350,726,126"/>
-        <Image x:Name="target" Source="/Textures/pngwing.com.png"   Margin="739,287,0,83"/>
-        
-        <StackPanel x:Name="StartData" HorizontalAlignment="Left" Margin="18,18,0,0" Orientation="Horizontal" VerticalAlignment="Top">
-            <TextBox x:Name="StSpeed" materialDesign:HintAssist.Hint="Введите начальную скорость" Height="26"   Width="162" Cursor="IBeam" />
-
-            <TextBox x:Name="StAngle"  materialDesign:HintAssist.Hint="Введите угол полета"  Height="29"  Width="168" Cursor="IBeam" />
-            <Button x:Name="Fire" Content="FIRE!!!!!" Height="39" Width="127" Click="Button_Click" Cursor="Hand"/>
 
 
-        </StackPanel>
-        <Canvas x:Name="Move" Margin="10,62,0,0">
-            
+        <Grid x:Name="StartData"  Height="75" Background="#FF5BB2CE" Width="799" HorizontalAlignment="Left">
+            <TextBox x:Name="StAngle"  materialDesign:HintAssist.Hint="Введите угол полета"  Height="29"  Width="168" Cursor="IBeam" Margin="10,45,621,1" />
+            <TextBox x:Name="StSpeed" materialDesign:HintAssist.Hint="Введите начальную скорость" Height="26"   Width="162" Cursor="IBeam" Margin="10,2,627,23" />
+            <Button x:Name="Fire" Content="FIRE!!!!!" Height="39" Width="127" Click="Button_Click" Cursor="Hand" Margin="178,20,494,16"/>
+            <Button x:Name="restart" Content="restart" Height="36" Width="85" Click="restartGame" Margin="704,4,10,35"/>
+            <Label x:Name="Score" Margin="374,20,193,31"/>
+
+        </Grid>
+        <Canvas x:Name="MoveArea" Height="331" Width="799">
+
+            <Image x:Name="Trg" Source="/Textures/pngwing.com.png" Height="35" Canvas.Top="66.396" Width="36" Canvas.Left="753"/>
+            <Image x:Name="Ammo" Source="/Textures/kisspng-flappy-bird-tap-bird-2d-jump-bird-jump-squishy-bir-flies-5abdce778f3ff8.7258311415223885995868.png" Height="42" Canvas.Top="293" Width="30" Canvas.Left="10"/>
         </Canvas>
-        
-
-        <Label x:Name="Score" Height="24" Canvas.Left="349" Canvas.Top="31" Width="232" Margin="370,26,198,470"/>
-        <Button x:Name="restart" Content="restart" HorizontalAlignment="Left" Height="28" Margin="678,26,0,0" VerticalAlignment="Top" Width="92" Click="restartGame"/>
 
     </StackPanel>
 </Window>

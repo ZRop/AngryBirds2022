@@ -33,6 +33,8 @@ namespace WpfApp1
 
         int score = 0;
 
+        int Trg_pos;
+
         double kx, ky;
 
         public MainWindow()
@@ -45,12 +47,25 @@ namespace WpfApp1
         public void StartGame()
         {
             tmr.Interval = TimeSpan.FromMilliseconds(100);
-            
 
-            
+            Canvas.SetTop(Ammo,260);
+            Canvas.SetLeft(Ammo, 10);
+
+            Random pos = new Random();
+            Canvas.SetLeft(Trg, 735);
+            Canvas.SetTop(Trg, pos.Next(65, 260));
+
+
+
             score = 0;
 
-            StartData.Visibility = Visibility.Visible;
+            StAngle.Visibility = Visibility.Visible;
+            StSpeed.Visibility = Visibility.Visible;
+            Fire.Visibility = Visibility.Visible;
+
+            StAngle.Clear();
+            StSpeed.Clear();
+
 
             Random rnd = new Random();
             kx = rnd.Next(-1, 1);
@@ -81,7 +96,10 @@ namespace WpfApp1
             }
             else
             {
-                StartData.Visibility = Visibility.Hidden;
+                StAngle.Visibility = Visibility.Hidden;
+                StSpeed.Visibility = Visibility.Hidden;
+                Fire.Visibility = Visibility.Hidden;
+                restart.Visibility = Visibility.Visible;
                 
 
 
@@ -91,6 +109,11 @@ namespace WpfApp1
                 MessageBox.Show("Стартовый угол " + StAngle.Text + ", а стартовая скорость " + StSpeed.Text +" Приземление состоиться в Х = "+ par.coordX[par.coordX.Count - 1]);
 
 
+                for ()
+                {
+
+                }
+
                 gameover = true;
                 
             }
@@ -99,7 +122,7 @@ namespace WpfApp1
 
         }
 
-
+        /*
         void StartDrag(object sender, MouseButtonEventArgs e)
         {
             draggedObject = (FrameworkElement)sender;
@@ -136,7 +159,7 @@ namespace WpfApp1
             draggedObject.LostMouseCapture -= OnLostCapture;
             draggedObject.MouseUp -= OnMouseUp;
             UpdatePosition(e);
-        }
+        }*/
 
 
 

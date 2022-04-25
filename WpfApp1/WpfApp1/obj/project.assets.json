@@ -97,11 +97,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Artem.Churikov\\Documents\\GitHub\\Bot\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+      "projectUniqueName": "C:\\Users\\Artem.Churikov\\Documents\\GitHub\\AngryBirds2022\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
       "projectName": "WpfApp1",
-      "projectPath": "C:\\Users\\Artem.Churikov\\Documents\\GitHub\\Bot\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+      "projectPath": "C:\\Users\\Artem.Churikov\\Documents\\GitHub\\AngryBirds2022\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
       "packagesPath": "C:\\Users\\Artem.Churikov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Artem.Churikov\\Documents\\GitHub\\Bot\\WpfApp1\\WpfApp1\\obj\\",
+      "outputPath": "C:\\Users\\Artem.Churikov\\Documents\\GitHub\\AngryBirds2022\\WpfApp1\\WpfApp1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
