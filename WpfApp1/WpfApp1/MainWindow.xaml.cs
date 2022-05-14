@@ -13,8 +13,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using System.Threading;
 using System.Windows.Threading;
+using System.Threading.Tasks;
 
 namespace WpfApp1
 {
@@ -23,41 +24,45 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        DispatcherTimer tmr = new DispatcherTimer();
 
-        Vector relativeMousePos;
-        FrameworkElement draggedObject;
+        
 
 
         bool gameover = false;
 
-        int score = 0;
+        
 
-        int Trg_pos;
+        
 
         double kx, ky;
 
         public MainWindow()
         {
             InitializeComponent();
+            
+            
 
             StartGame();
         }
 
+        
+
+        
+
         public void StartGame()
         {
-            tmr.Interval = TimeSpan.FromMilliseconds(100);
+            
 
-            Canvas.SetTop(Ammo,260);
+            Canvas.SetTop(Ammo,290);
             Canvas.SetLeft(Ammo, 10);
 
             Random pos = new Random();
             Canvas.SetLeft(Trg, 735);
-            Canvas.SetTop(Trg, pos.Next(65, 260));
+            Canvas.SetTop(Trg, pos.Next(200, 290));
 
 
 
-            score = 0;
+            
 
             StAngle.Visibility = Visibility.Visible;
             StSpeed.Visibility = Visibility.Visible;
@@ -67,30 +72,26 @@ namespace WpfApp1
             StSpeed.Clear();
 
 
-            Random rnd = new Random();
-            kx = rnd.Next(-1, 1);
-            ky = rnd.Next(-1, 1);
+            
+            kx =1;
+            ky =1;
 
             gameover = false;
         }
 
         private void restartGame(object sender, RoutedEventArgs e)
         {
-            if(gameover == true)
-            {
                 StartGame();
-            }
-            
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
             string speed = StSpeed.Text;
             string angle = StAngle.Text;
 
             
 
-            if(speed.Length == 0 || angle.Length == 0)
+            if(speed.Length == 0 || angle.Length == 0 || Convert.ToDouble(angle) > 90)
             {
                 MessageBox.Show("Введите данные корректно!!!");
             }
@@ -104,14 +105,22 @@ namespace WpfApp1
 
 
 
-                Par par = new Par(Convert.ToDouble(angle), Convert.ToDouble(speed), Convert.ToDouble(kx), Convert.ToDouble(ky));
+                Par par = new Par(Convert.ToDouble(angle), Convert.ToDouble(speed), kx,ky);
 
-                MessageBox.Show("Стартовый угол " + StAngle.Text + ", а стартовая скорость " + StSpeed.Text +" Приземление состоиться в Х = "+ par.coordX[par.coordX.Count - 1]);
+                //MessageBox.Show("Стартовый угол " + StAngle.Text + ", а стартовая скорость " + StSpeed.Text +" Приземление состоиться в Х = "+ 15*par.coordX[par.coordX.Count - 1]);
 
+               
 
-                for ()
-                {
+                for (int i = 0; i < par.coordX.Count; i++)
+                { 
+                    Canvas.SetTop(Ammo,290 - 50*(par.coordY[i]));
+                    Canvas.SetLeft(Ammo, 50*par.coordX[i]);
 
+                    await Task.Delay(50);
+                        if((Canvas.GetTop(Ammo) >= Canvas.GetTop(Trg)) && (Canvas.GetTop(Ammo) <= 40 + Canvas.GetTop(Trg)) && (Canvas.GetLeft(Ammo) <= 40 + Canvas.GetLeft(Trg)) && (Canvas.GetLeft(Ammo) <= 40 + Canvas.GetLeft(Trg)))
+                    {
+                        MessageBox.Show("You won!!!");
+                    }
                 }
 
                 gameover = true;
@@ -122,44 +131,7 @@ namespace WpfApp1
 
         }
 
-        /*
-        void StartDrag(object sender, MouseButtonEventArgs e)
-        {
-            draggedObject = (FrameworkElement)sender;
-            relativeMousePos = e.GetPosition(draggedObject) - new Point();
-            draggedObject.MouseMove += OnDragMove;
-            draggedObject.LostMouseCapture += OnLostCapture;
-            draggedObject.MouseUp += OnMouseUp;
-            Mouse.Capture(draggedObject);
-        }
-        void OnDragMove(object sender, MouseEventArgs e)
-        {
-            UpdatePosition(e);
-        }
-        void UpdatePosition(MouseEventArgs e)
-        {
-            var point = e.GetPosition(www);
-            var newPos = point - relativeMousePos;
-            Canvas.SetLeft(draggedObject, newPos.X);
-            Canvas.SetTop(draggedObject, newPos.Y);
-        }
-        void OnMouseUp(object sender, MouseButtonEventArgs e)
-        {
-            FinishDrag(sender, e);
-            Mouse.Capture(null);
-        }
 
-        void OnLostCapture(object sender, MouseEventArgs e)
-        {
-            FinishDrag(sender, e);
-        }
-        void FinishDrag(object sender, MouseEventArgs e)
-        {
-            draggedObject.MouseMove -= OnDragMove;
-            draggedObject.LostMouseCapture -= OnLostCapture;
-            draggedObject.MouseUp -= OnMouseUp;
-            UpdatePosition(e);
-        }*/
 
 
 

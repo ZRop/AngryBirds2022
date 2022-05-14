@@ -12,3 +12,10 @@ C:\Users\Artem.Churikov\Documents\GitHub\Bot\BackEnd\BackEnd\obj\Debug\BackEnd.c
 C:\Users\Artem.Churikov\Documents\GitHub\Bot\BackEnd\BackEnd\obj\Debug\BackEnd.csproj.CoreCompileInputs.cache
 C:\Users\Artem.Churikov\Documents\GitHub\Bot\BackEnd\BackEnd\obj\Debug\BackEnd.exe
 C:\Users\Artem.Churikov\Documents\GitHub\Bot\BackEnd\BackEnd\obj\Debug\BackEnd.pdb
+C:\Users\Artem.Churikov\Documents\GitHub\AngryBirds2022\BackEnd\BackEnd\bin\Debug\BackEnd.exe.config
+C:\Users\Artem.Churikov\Documents\GitHub\AngryBirds2022\BackEnd\BackEnd\bin\Debug\BackEnd.exe
+C:\Users\Artem.Churikov\Documents\GitHub\AngryBirds2022\BackEnd\BackEnd\bin\Debug\BackEnd.pdb
+C:\Users\Artem.Churikov\Documents\GitHub\AngryBirds2022\BackEnd\BackEnd\obj\Debug\BackEnd.csprojAssemblyReference.cache
+C:\Users\Artem.Churikov\Documents\GitHub\AngryBirds2022\BackEnd\BackEnd\obj\Debug\BackEnd.csproj.CoreCompileInputs.cache
+C:\Users\Artem.Churikov\Documents\GitHub\AngryBirds2022\BackEnd\BackEnd\obj\Debug\BackEnd.exe
+C:\Users\Artem.Churikov\Documents\GitHub\AngryBirds2022\BackEnd\BackEnd\obj\Debug\BackEnd.pdb

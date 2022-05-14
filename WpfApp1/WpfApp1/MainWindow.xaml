@@ -22,10 +22,10 @@
             <Label x:Name="Score" Margin="374,20,193,31"/>
 
         </Grid>
-        <Canvas x:Name="MoveArea" Height="331" Width="799">
+        <Canvas x:Name="MoveArea" Height="330" Width="799">
 
-            <Image x:Name="Trg" Source="/Textures/pngwing.com.png" Height="35" Canvas.Top="66.396" Width="36" Canvas.Left="753"/>
-            <Image x:Name="Ammo" Source="/Textures/kisspng-flappy-bird-tap-bird-2d-jump-bird-jump-squishy-bir-flies-5abdce778f3ff8.7258311415223885995868.png" Height="42" Canvas.Top="293" Width="30" Canvas.Left="10"/>
+            <Image x:Name="Trg" Source="/Textures/pngwing.com.png" Height="40" Canvas.Top="66.396" Width="40" Canvas.Left="753"/>
+            <Image x:Name="Ammo" Source="/Textures/kisspng-flappy-bird-tap-bird-2d-jump-bird-jump-squishy-bir-flies-5abdce778f3ff8.7258311415223885995868.png" Height="40" Canvas.Top="290" Width="40" Canvas.Left="10"/>
         </Canvas>
 
     </StackPanel>

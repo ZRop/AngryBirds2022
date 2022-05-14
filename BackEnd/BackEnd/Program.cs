@@ -13,55 +13,59 @@ namespace BackEnd
         public List<double> coordX = new List<double>();
         public List<double> coordY = new List<double>();
         public double m = 5;
-        public double kx,ky;
-        public double Angle, StSpeed, Height, Time, DifTime;
+        public double kx, ky;
+        public double Angle, StSpeed;
 
-        public Par(double Angle, double StSpeed, double Height, double kx, double ky)
+        public Par(double Angle, double StSpeed, double kx, double ky)
         {
             this.Angle = Angle;
             this.StSpeed = StSpeed;
-            this.Height = Height;
             this.kx = kx;
             this.ky = ky;
-            
-            
-            List<double> speedx = new List<double> ();
-            List<double> speedy = new List<double> ();
-            
+
+
+            List<double> speedx = new List<double>();
+            List<double> speedy = new List<double>();
+
             int i = 0;
-            speedx.Add(StSpeed * Math.Cos(Angle));
-            speedy.Add((StSpeed * Math.Sin(Angle)));
+            speedx.Add(StSpeed * Math.Cos(Angle * Math.PI / 180));
+            speedy.Add((StSpeed * Math.Sin(Angle*Math.PI / 180)));
             coordX.Add(0);
-            coordY.Add(Height);
+            coordY.Add(0);
 
 
             while (true)
             {
-                speedx.Add(speedx[i] - 0.5 * (kx * speedx[i]) / m);
-                speedy.Add(speedy[i] - 0.5 * (g + (ky * speedy[i]) / m));
-                coordX.Add(coordX[i] + 0.5 * speedx[i]);
-                coordY.Add(coordY[i] + 0.5 * speedy[i]);
+                speedx.Add(speedx[i] - 0.16 * (kx * speedx[i]) / m);
+                speedy.Add(speedy[i] - 0.16 * (g + (ky * speedy[i]) / m));
+
+                
 
 
-                if ((coordY[i] + 0.5 * speedy[i]) < 0) { break; }
+                if ((coordY[i] + 0.16 * speedy[i]) >= 0) {
+                    coordX.Add(coordX[i] + 0.16 * speedx[i]);
+                    coordY.Add(coordY[i] + 0.16 * speedy[i]);
+                } 
+                else { break; }
 
                 i++;
 
             }
-            
+
         }
 
         public void Out()
         {
-            FileStream file = new FileStream(@"..\..\..\Data.csv", FileMode.Create);
+            FileStream file = new FileStream(@"..\..\..\Data.csv", FileMode.Create);//
             StreamWriter writer = new StreamWriter(file);
-            
-            for (int i = 0; i < coordX.Count; i++) {
-            
 
-                writer.WriteLine(coordX[i] + ";" + coordY[i]) ;
-                
-               
+            for (int i = 0; i < coordX.Count; i++)
+            {
+
+
+                writer.WriteLine(coordX[i] + ";" + coordY[i]);
+
+
             }
             writer.Close();
         }
@@ -71,7 +75,7 @@ namespace BackEnd
         static void Main(string[] args)
         {
             
-            Par test1 =new Par(Convert.ToDouble(Console.ReadLine()), Convert.ToDouble(Console.ReadLine()), Convert.ToDouble(Console.ReadLine()), Convert.ToDouble(Console.ReadLine()), Convert.ToDouble(Console.ReadLine()));
+            Par test1 =new Par(Convert.ToDouble(Console.ReadLine()), Convert.ToDouble(Console.ReadLine()), Convert.ToDouble(Console.ReadLine()), Convert.ToDouble(Console.ReadLine()));
             
             test1.Out();
             int x = Console.Read();
