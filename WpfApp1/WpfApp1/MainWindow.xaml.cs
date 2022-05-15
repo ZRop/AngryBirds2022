@@ -1,4 +1,4 @@
-﻿using BackEnd;
+using BackEnd;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,12 +53,12 @@ namespace WpfApp1
         {
             
 
-            Canvas.SetTop(Ammo,290);
+            Canvas.SetTop(Ammo,289);
             Canvas.SetLeft(Ammo, 10);
 
             Random pos = new Random();
             Canvas.SetLeft(Trg, 735);
-            Canvas.SetTop(Trg, pos.Next(200, 290));
+            Canvas.SetTop(Trg, pos.Next(200, 250));
 
 
 
@@ -116,18 +116,29 @@ namespace WpfApp1
                     Canvas.SetTop(Ammo,290 - 50*(par.coordY[i]));
                     Canvas.SetLeft(Ammo, 50*par.coordX[i]);
 
-                    await Task.Delay(50);
-                        if((Canvas.GetTop(Ammo) >= Canvas.GetTop(Trg)) && (Canvas.GetTop(Ammo) <= 40 + Canvas.GetTop(Trg)) && (Canvas.GetLeft(Ammo) <= 40 + Canvas.GetLeft(Trg)) && (Canvas.GetLeft(Ammo) <= 40 + Canvas.GetLeft(Trg)))
+                    await Task.Delay(6);
+                    if (Canvas.GetLeft(Ammo) <= 800 && Canvas.GetTop(Ammo) <= 290 && i != par.coordX.Count - 1)
                     {
-                        MessageBox.Show("You won!!!");
+                        if (((Canvas.GetTop(Ammo) >= Canvas.GetTop(Trg)) && (Canvas.GetTop(Ammo) <= 40 + Canvas.GetTop(Trg)) && (Canvas.GetLeft(Ammo) >= Canvas.GetLeft(Trg)) && (Canvas.GetLeft(Ammo) <= 40 + Canvas.GetLeft(Trg))))
+                        {
+                            MessageBox.Show("You won!!!");
+
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("You lose!!!");
+                        break;
+                        
                     }
                 }
 
-                gameover = true;
+                
                 
             }
+            gameover = true;
 
-            
 
         }
 
