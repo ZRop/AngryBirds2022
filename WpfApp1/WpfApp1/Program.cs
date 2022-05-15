@@ -36,16 +36,16 @@ namespace BackEnd
 
             while (true)
             {
-                speedx.Add(speedx[i] - 0.05 * (kx * speedx[i]) / m);
-                speedy.Add(speedy[i] - 0.05 * (g + (ky * speedy[i]) / m));
+                speedx.Add(speedx[i] - 0.006 * (kx * speedx[i]) / m);
+                speedy.Add(speedy[i] - 0.006 * (g + (ky * speedy[i]) / m));
 
 
 
 
-                if ((coordY[i] + 0.05 * speedy[i]) >= 0)
+                if ((coordY[i] + 0.006 * speedy[i]) >= 0)
                 {
-                    coordX.Add(coordX[i] + 0.05 * speedx[i]);
-                    coordY.Add(coordY[i] + 0.05 * speedy[i]);
+                    coordX.Add(coordX[i] + 0.006 * speedx[i]);
+                    coordY.Add(coordY[i] + 0.006 * speedy[i]);
                 }
                 else { break; }
 

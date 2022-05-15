@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "cTSs1WSeakxUGRC93RuBYRXwR+f6vm2czDv484+HoRhR+pmJdYDLEob3h8g8pFsMo4sfqq3Yn0mtSPqwfrxAVw==",
+  "dgSpecHash": "rFOkUHAK9XNf5QZIFhtHsCglczvRJimNcYQSGVrqTW0NBJVCfy6bCEbl7KReZtdTAFNtRNb/yB6psFJl/vgxeQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Artem.Churikov\\Documents\\GitHub\\AngryBirds2022\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+  "projectFilePath": "C:\\Users\\MIKHAIL\\WorkSpace\\AngryBirds2022\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Artem.Churikov\\.nuget\\packages\\materialdesigncolors\\2.0.4\\materialdesigncolors.2.0.4.nupkg.sha512",
-    "C:\\Users\\Artem.Churikov\\.nuget\\packages\\materialdesignthemes\\4.3.0\\materialdesignthemes.4.3.0.nupkg.sha512"
+    "C:\\Users\\MIKHAIL\\.nuget\\packages\\materialdesigncolors\\2.0.4\\materialdesigncolors.2.0.4.nupkg.sha512",
+    "C:\\Users\\MIKHAIL\\.nuget\\packages\\materialdesignthemes\\4.3.0\\materialdesignthemes.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
