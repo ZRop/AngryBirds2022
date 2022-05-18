@@ -119,3 +119,5 @@ C:\Users\MIKHAIL\WorkSpace\AngryBirds2022\WpfApp1\WpfApp1\obj\Debug\netcoreapp3.
 C:\Users\MIKHAIL\WorkSpace\AngryBirds2022\WpfApp1\WpfApp1\obj\Debug\netcoreapp3.1\WpfApp1.dll
 C:\Users\MIKHAIL\WorkSpace\AngryBirds2022\WpfApp1\WpfApp1\obj\Debug\netcoreapp3.1\WpfApp1.pdb
 C:\Users\MIKHAIL\WorkSpace\AngryBirds2022\WpfApp1\WpfApp1\obj\Debug\netcoreapp3.1\WpfApp1.genruntimeconfig.cache
+C:\Users\MIKHAIL\WorkSpace\AngryBirds2022\WpfApp1\WpfApp1\obj\Debug\netcoreapp3.1\Window1.g.cs
+C:\Users\MIKHAIL\WorkSpace\AngryBirds2022\WpfApp1\WpfApp1\obj\Debug\netcoreapp3.1\Window1.baml

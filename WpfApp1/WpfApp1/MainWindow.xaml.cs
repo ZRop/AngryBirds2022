@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using System.Threading;
 using System.Windows.Threading;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace WpfApp1
 {
@@ -30,24 +31,43 @@ namespace WpfApp1
 
         bool gameover = false;
 
-        
-
-        
-
         double kx, ky;
 
         public MainWindow()
         {
             InitializeComponent();
             
-            
-
             StartGame();
+        }
+
+        private void SaveF(object sender, RoutedEventArgs e)
+        {
+            string s = StSpeed.Text;
+            string a = StAngle.Text;
+            using (var save = new StreamWriter(@"..\..\..\Data.txt"))
+            {
+                save.WriteLine(s);
+                save.WriteLine(a);
+                
+            }
         }
 
         
 
-        
+        private void LoadF(object Sender, RoutedEventArgs e)
+        {
+            using (var load = new StreamReader(@"..\..\..\Data.txt"))
+            {
+
+
+                StSpeed.Text = load.ReadLine();
+                StAngle.Text = load.ReadLine();
+
+            }
+
+
+        }
+
 
         public void StartGame()
         {
@@ -100,7 +120,7 @@ namespace WpfApp1
                 StAngle.Visibility = Visibility.Hidden;
                 StSpeed.Visibility = Visibility.Hidden;
                 Fire.Visibility = Visibility.Hidden;
-                restart.Visibility = Visibility.Visible;
+                
                 
 
 
@@ -117,7 +137,7 @@ namespace WpfApp1
                     Canvas.SetLeft(Ammo, 50*par.coordX[i]);
 
                     await Task.Delay(6);
-                    if (Canvas.GetLeft(Ammo) <= 800 && Canvas.GetTop(Ammo) <= 290 && i != par.coordX.Count - 1)
+                    if (Canvas.GetLeft(Ammo) <= 760 && Canvas.GetTop(Ammo) <= 290 && i != par.coordX.Count - 1)
                     {
                         if (((Canvas.GetTop(Ammo) >= Canvas.GetTop(Trg)) && (Canvas.GetTop(Ammo) <= 40 + Canvas.GetTop(Trg)) && (Canvas.GetLeft(Ammo) >= Canvas.GetLeft(Trg)) && (Canvas.GetLeft(Ammo) <= 40 + Canvas.GetLeft(Trg))))
                         {

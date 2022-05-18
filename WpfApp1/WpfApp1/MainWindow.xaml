@@ -11,14 +11,20 @@
         <ImageBrush ImageSource="/Textures/1620826823_11-phonoteka_org-p-pikselnii-fon-zemli-18.jpg"/>
     </Window.Background>
     <StackPanel x:Name="w" Focusable="True">
-
+        <Menu Height="25 " VerticalAlignment="top">
+            <MenuItem Header="File" Height="27">
+                <MenuItem Header="Save" Click="SaveF"/>
+                <MenuItem Header="Load" Click="LoadF"/>
+            </MenuItem>
+            <MenuItem Header="Restart" Click="restartGame" Height="22"/>
+        </Menu>
 
 
         <Grid x:Name="StartData"  Height="75" Background="#FF5BB2CE" Width="799" HorizontalAlignment="Left">
             <TextBox x:Name="StAngle"  materialDesign:HintAssist.Hint="Введите угол полета"  Height="29"  Width="168" Cursor="IBeam" Margin="10,45,621,1" />
             <TextBox x:Name="StSpeed" materialDesign:HintAssist.Hint="Введите начальную скорость" Height="26"   Width="162" Cursor="IBeam" Margin="10,2,627,23" />
             <Button x:Name="Fire" Content="FIRE!!!!!" Height="39" Width="127" Click="Button_Click" Cursor="Hand" Margin="178,20,494,16"/>
-            <Button x:Name="restart" Content="restart" Height="36" Width="85" Click="restartGame" Margin="704,4,10,35"/>
+            
             <Label x:Name="Score" Margin="374,20,193,31"/>
 
         </Grid>
